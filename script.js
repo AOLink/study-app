@@ -23,8 +23,8 @@ const quizData = [
         question:"A technician is investigating a server performance issue. The technician has gathered the server utilization stats. Which of the following should the technician use to determine which of the stats aren't in the normal range?",
         a: 'baseline review',
         b: 'vulnerability scan',
-        d: 'system life-cycle report',
-        e: 'Archiving logs',
+        c: 'system life-cycle report',
+        d: 'Archiving logs',
         correct: a,   
     },
 
@@ -53,11 +53,17 @@ const b_text = document.getElementById('b_text');
 const c_text = document.getElementById('c_text');
 const d_text = document.getElementById('d_text');
 
-let currentQuestion = 0; 
+let currentQuiz = 0; 
 
 loadQuiz() ;
 
 function loadQuiz(){
-    questionE1.innerHTML = quizData[currentQuestion]
+    const currentQuizData = quizData[currentQuiz];
+    questionE1.innerHTML = currentQuizData.question;
+    a_text.innerText = currentQuizData.a;
+    b_text.innerText = currentQuizData.b;
+    c_text.innerText = currentQuizData.c;
+    d_text.innerText = currentQuizData.d;
+
     currentQuestion++
 }
