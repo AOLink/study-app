@@ -71,8 +71,15 @@ function loadQuiz(){
 
 
 submitBtn.addEventListener("click", ()=> {
-
 currentQuiz++
 
-loadQuiz();
+if(currentQuiz < quizData.length ) {
+    loadQuiz();
+} else {
+    // Display progress
+    alert("Congratulations you've completed the test")
+    // calculate score???
+}
+
+
 })

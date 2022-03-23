@@ -46,6 +46,10 @@ ul li {
     font-weight:bolder;
     margin: 1rem 0; 
 }
+ul li label {
+    cursor: pointer;
+
+}
 
 button {
     /* background-color: wheat; */
