@@ -61,24 +61,37 @@ loadQuiz() ;
 function loadQuiz(){
 
     const currentQuizData = quizData[currentQuiz];
-    questionE1.innerHTML = currentQuizData.question;
+    questionE1.innerHTML = currentQuizData.question;            
+
+
     a_text.innerText = currentQuizData.a;
     b_text.innerText = currentQuizData.b;
     c_text.innerText = currentQuizData.c;
-    d_text.innerText = currentQuizData.d;
-
+    d_text.innerText = currentQuizData.d; 
 }
 
+
+function getSelected() {
+
+    const answers = document.querySelectorAll("answer");
+    answers.forEach((answer) => {
+        console.log(answer.value);
+
+    })
+
+}
 
 submitBtn.addEventListener("click", ()=> {
 currentQuiz++
 
 if(currentQuiz < quizData.length ) {
-    loadQuiz();
+    loadQuiz()
 } else {
     // Display progress
     alert("Congratulations you've completed the test")
     // calculate score???
+
+    // todo - Show results
 }
 
 
