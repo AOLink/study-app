@@ -58,6 +58,8 @@ let currentQuiz = 0;
 
 loadQuiz() ;
 
+
+// I need a function to load each questions data - after the user submits their answer
 function loadQuiz(){
 
     const currentQuizData = quizData[currentQuiz];
@@ -67,10 +69,11 @@ function loadQuiz(){
     a_text.innerText = currentQuizData.a;
     b_text.innerText = currentQuizData.b;
     c_text.innerText = currentQuizData.c;
-    d_text.innerText = currentQuizData.d; 
+    d_text.innerText = currentQuizData.d;     
 }
 
 
+// I need a function to
 function getSelected() {
 
     const answers = document.querySelectorAll("answer");
@@ -81,6 +84,15 @@ function getSelected() {
 
 }
 
+
+
+// By default when a new set of question data is loaded - the same radio button that was selected for the last answer will still be highlighted, we need a way to deselect the radio buttons so none are selected until the user does so. 
+
+// I need to ensure a user cannot submit the question without attempting the question. 
+
+
+
+// I need to give the submit button the capability to: load the next quiz, determine whether or not the user has reached the last question.
 submitBtn.addEventListener("click", ()=> {
 currentQuiz++
 
