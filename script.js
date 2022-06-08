@@ -100,6 +100,11 @@ currentQuiz++
 //     if(answer === quizData[currentQuiz])
 // }
 
+ if (answer) {
+     if(answer === quizData[currentQuiz])
+}
+
+
 if(currentQuiz < quizData.length ) {
     loadQuiz()
 } else {
