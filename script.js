@@ -95,16 +95,9 @@ function getSelected() {
 // I need to give the submit button the capability to: load the next quiz, determine whether or not the user has reached the last question.
 submitBtn.addEventListener("click", ()=> {
 currentQuiz++
-
 // if (answer) {
 //     if(answer === quizData[currentQuiz])
-// }
-
- if (answer) {
-     if(answer === quizData[currentQuiz])
-}
-
-
+// } 
 if(currentQuiz < quizData.length ) {
     loadQuiz()
 } else {
@@ -114,6 +107,4 @@ if(currentQuiz < quizData.length ) {
 
     // todo - Show results
 }
-
-
 })
