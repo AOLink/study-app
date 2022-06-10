@@ -55,7 +55,7 @@ const d_text = document.getElementById('d_text');
 const submitBtn = document.getElementById('submit');
 
 let currentQuiz = 0; 
-
+let answer = undefined;
 loadQuiz() ;
 
 
@@ -94,10 +94,12 @@ function getSelected() {
 
 // I need to give the submit button the capability to: load the next quiz, determine whether or not the user has reached the last question.
 submitBtn.addEventListener("click", ()=> {
-currentQuiz++
+currentQuiz++   
 // if (answer) {
 //     if(answer === quizData[currentQuiz])
 // } 
+
+
 if(currentQuiz < quizData.length ) {
     loadQuiz()
 } else {
