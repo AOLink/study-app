@@ -67,16 +67,14 @@ function loadQuiz(){
 
 
     a_text.innerText = currentQuizData.a;  
-    b_text.innerText = currentQuizData.b;
-    c_text.innerText = currentQuizData.c;
+    b_text.innerText = currentQuizData.b;      
     d_text.innerText = currentQuizData.d;     
 }
 
 
 // I need a function to
 function getSelected() {
-
-    const answers = document.querySelectorAll("answer");
+    const answers = document.querySelectorAll(".answer");
     answers.forEach((answer) => {
         console.log(answer.value);
 
@@ -94,19 +92,20 @@ function getSelected() {
 
 // I need to give the submit button the capability to: load the next quiz, determine whether or not the user has reached the last question.
 submitBtn.addEventListener("click", ()=> {
-currentQuiz++   
+currentQuiz++  
+getSelected(); 
 // if (answer) {
 //     if(answer === quizData[currentQuiz])
 // } 
 
 
-if(currentQuiz < quizData.length ) {
-    loadQuiz()
-} else {
-    // Display progress
-    alert("Congratulations you've completed the test")
-    // calculate score???
+// if(currentQuiz < quizData.length ) {
+//     loadQuiz()
+// } else {
+//     // Display progress
+//     alert("Congratulations you've completed the test")
+//     // calculate score???
 
-    // todo - Show results
-}
+//     // todo - Show results
+// }
 })
